@@ -1,0 +1,40 @@
+{
+  "name": "api-reportes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cls && node dist/index.js",
+    "html": "copyfiles src/public/*.html dist --up 1",
+    "untils": "copyfiles *.json dist",
+    "env": "copyfiles .env dist",
+    "build": "tsc && npm run html && npm run untils && npm run env",
+    "restart": " tsc && npm run html && npm run untils && npm run env && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://192.168.0.81/api-services/api-reportes"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "copyfiles": "^2.1.1",
+    "crypto-js": "^4.1.1",
+    "dependencies": "^0.0.1",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.24.0",
+    "oracledb": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.1.1",
+    "@types/dotenv": "^6.1.1",
+    "@types/express": "^4.17.0",
+    "@types/oracledb": "^4.0.0",
+    "nodemon": "^2.0.15",
+    "typescript": "^3.5.3"
+  }
+}
